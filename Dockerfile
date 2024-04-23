@@ -8,4 +8,4 @@ WORKDIR /ebook-demo
 RUN npm install
 EXPOSE 5173
 
-CMD ["npm", "start"]
+CMD ["npm", "run dev"]
