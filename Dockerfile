@@ -1,5 +1,5 @@
 FROM node:lts AS dependencies
-RUN apt update && apt install git
+RUN apt update && apt install git -y
 WORKDIR /app
 RUN git clone https://github.com/j2qk3b/ebook-demo 
 WORKDIR /app/ebook-demo
