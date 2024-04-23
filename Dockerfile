@@ -3,8 +3,8 @@ RUN apk update && \
     apk add --update git && \
     apk add --update openssh
 WORKDIR /
-RUN git clone https://github.com/j2qk3b/ebook-demo
-WORKDIR /ebook-demo
+RUN git clone https://github.com/painteau/ebook-demo-docker
+WORKDIR /ebook-demo-docker
 RUN npm install
 EXPOSE 5173
 
