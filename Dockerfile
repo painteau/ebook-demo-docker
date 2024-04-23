@@ -1,5 +1,5 @@
-FROM node:alpine AS dependencies
-RUN apk update && apk add --update git && apk add --update openssh
+FROM node:lts AS dependencies
+RUN apt update && apt install git
 RUN git clone https://github.com/j2qk3b/ebook-demo /ebook-demo
 WORKDIR /app
 COPY /ebook-demo/package.json /app/
