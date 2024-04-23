@@ -1,11 +1,14 @@
-FROM node:lts AS dependencies
+FROM node:alpine AS dependencies
+RUN apk update && apk add --update git && apk add --update openssh
+RUN git clone https://github.com/j2qk3b/ebook-demo /ebook-demo
 WORKDIR /app
-ADD package.json package-lock.json /app/
+COPY /ebook-demo/package.json /app/
+COPY /ebook-demo/package-lock.json /app/
 RUN npm clean-install --frozen-lockfile
 
 FROM dependencies AS build
 WORKDIR /app
-ADD . /app/
+COPY /ebook-demo/. /app/
 COPY --from=dependencies /app/node_modules /app/node_modules
 RUN npm run build
 
