@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:current-alpine
 RUN apk update && \
     apk add --update git && \
     apk add --update openssh
