@@ -1,7 +1,10 @@
 # A Decentralized Book Search Engine
 
-This repo creates a docker package for https://github.com/j2qk3b/ebook-demo
+This repo creates a docker package for https://github.com/j2qk3b/ebook-demo !
+
 This project is a demo of a decentralized book search engine. It allows users to search for books based on their titles and displays the search results in a simple interface.
+
+This docker should not be used in production, as the original project is not finished.
 
 ### Installation
 
